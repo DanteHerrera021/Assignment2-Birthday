@@ -39,4 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 elem.classList.add("animate__animated", "animate__bounceOutUp");
         }
     });
+
+    document.getElementById("submit").addEventListener('click', function (e) {
+
+    })
 });
