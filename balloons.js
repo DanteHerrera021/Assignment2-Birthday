@@ -41,7 +41,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.getElementById("submit").addEventListener('click', function (e) {
-        let checkboxes = document.getElementsByClassName("form-input-check");
-        let checked = false;
+        let checkboxes = document.getElementsByClassName("form-check-input");
+        let isChecked = false;
+
+        for (let i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                isChecked = true;
+            }
+        }
     })
 });
