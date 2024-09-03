@@ -72,4 +72,9 @@ document.addEventListener("DOMContentLoaded", function () {
             bootstrap.Toast.getOrCreateInstance(document.getElementById('liveToast')).hide();
         }
     };
+
+    document.querySelectorAll('.form-check-label').forEach(c => c.addEventListener('mouseover', function (e) {
+        document.getElementById('h1-greeting').style.color = this.id
+    }));
+
 });
