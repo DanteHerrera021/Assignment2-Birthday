@@ -44,6 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
         let checkboxes = document.getElementsByClassName("form-check-input");
         for (let i = 0; i < checkboxes.length; i++) {
             checkboxes[i].checked = true;
+            // trigger balloon anim manually
+            checkboxes[i].dispatchEvent(new Event('change', { bubbles: true }));
         }
     });
 
@@ -51,6 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
         let checkboxes = document.getElementsByClassName("form-check-input");
         for (let i = 0; i < checkboxes.length; i++) {
             checkboxes[i].checked = false;
+            // trigger balloon anim manually
+            checkboxes[i].dispatchEvent(new Event('change', { bubbles: true }));
         }
     });
 
