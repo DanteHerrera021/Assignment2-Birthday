@@ -40,20 +40,32 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    document.getElementById("select-all").addEventListener('click', function (e) {
+        let checkboxes = document.getElementsByClassName("form-check-input");
+        for (let i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].checked = true;
+        }
+    });
+
+    document.getElementById("select-none").addEventListener('click', function (e) {
+        let checkboxes = document.getElementsByClassName("form-check-input");
+        for (let i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].checked = false;
+        }
+    });
+
     document.getElementById("submit").addEventListener('click', function (e) {
         let checkboxes = document.getElementsByClassName("form-check-input");
         let isChecked = false;
-
         for (let i = 0; i < checkboxes.length; i++) {
             if (checkboxes[i].checked) {
                 isChecked = true;
             }
         }
-
         if (!isChecked) {
             bootstrap.Toast.getOrCreateInstance(document.getElementById('liveToast')).show();
         }
-    })
+    });
 
     document.onkeyup = function (e) {
         if (e.key === "Escape") {
