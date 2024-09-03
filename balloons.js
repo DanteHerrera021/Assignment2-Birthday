@@ -1,4 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const animLibrary = [
+        "animate__bounce",
+        "animate__flash",
+        "animate__pulse",
+        "animate__rubberBand",
+        "animate__shakeX",
+        "animate__shakeY",
+        "animate__headShake",
+        "animate__swing",
+        "animate__tada",
+        "animate__wobble",
+        "animate__jello",
+        "animate__heartBeat"
+    ]
+
+
+
     const elem = document.getElementById('dob');
     const datepicker = new Datepicker(elem, {
         // options
