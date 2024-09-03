@@ -14,7 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
         "animate__heartBeat"
     ]
 
-    let randNum = Math.floor(Math.random() * animLibrary.length)
+    let randAnim = Math.floor(Math.random() * animLibrary.length)
+
+    document.getElementById("h1-greeting").classList.add(animLibrary[randAnim])
 
     const elem = document.getElementById('dob');
     const datepicker = new Datepicker(elem, {
