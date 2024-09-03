@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     document.querySelectorAll('.form-check-label').forEach(c => c.addEventListener('mouseover', function (e) {
-        document.getElementById('h1-greeting').style.color = this.id
+        document.getElementById('h1-greeting').style.color = this.getAttribute('for')
     }));
-
 });
