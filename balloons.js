@@ -49,5 +49,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 isChecked = true;
             }
         }
+
+        if (!isChecked) {
+            bootstrap.Toast.getOrCreateInstance(document.getElementById('liveToast')).show();
+        }
     })
+
+    document.onkeyup = function (e) {
+        if (e.key === "Escape") {
+            bootstrap.Toast.getOrCreateInstance(document.getElementById('liveToast')).hide();
+        }
+    };
 });
